@@ -9,9 +9,21 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+/**
+ * SimpleFileLoader
+ *
+ * Loads client-provided claim files (JSON, XML, TXT),
+ * parses them, and keeps the results in memory so they
+ * can be reused by other parts of the application.
+ *
+ * This class intentionally keeps everything in one place
+ * to demonstrate a minimal, easy-to-follow solution.
+ */
+
+
 public class SimpleFileLoader {
 
-    // In-memory storage
+    // Parsed file contents stored in memory
     static JsonNode claimJson;
     static Document claimXml;
     static String claimTxt;
@@ -20,21 +32,21 @@ public class SimpleFileLoader {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        // JSON
+        // Parse JSON file into a JsonNode
         claimJson = mapper.readTree(
                 Files.readString(Path.of("claimJSON.json"))
         );
 
-        // XML
+        // Parse XML file into a DOM Document
         claimXml = DocumentBuilderFactory
                 .newInstance()
                 .newDocumentBuilder()
                 .parse("claimXML.xml");
 
-        // TXT
+        // Load TXT file as plain text
         claimTxt = Files.readString(Path.of("claimTxt.txt"));
 
-        // Example access
+        // Simple verification output
         System.out.println(claimJson);
         System.out.println(claimXml.getDocumentElement().getNodeName());
         System.out.println(claimTxt);
