@@ -1,0 +1,24 @@
+<claim>
+  <admissionDate/>
+  <allowed>0.0000</allowed>
+  <billed>200.0000</billed>
+  <fromDate>20251204</fromDate>
+  <hipaaDiagnosisCode1>R12</hipaaDiagnosisCode1>
+  <hipaaDiagnosisCodeQualifier1>ICD10CM</hipaaDiagnosisCodeQualifier1>
+  <lines>
+    <allowed>0.0000</allowed>
+    <billed>200.0000</billed>
+    <changeDate>20251204</changeDate>
+    <changeInit>SYS</changeInit>
+    <claim>123654789</claim>
+    <claimXref/>
+    <cob>0.0000</cob>
+    <coinsurance>0.0000</coinsurance>
+    <cptCode>99215</cptCode>
+    <date>20251204</date>
+    <hipaaOrigProcCode1>99215</hipaaOrigProcCode1>
+  </lines>
+  <memId1>AZ123098765</memId1>
+  <onsetCurrIllnessDate>20251204</onsetCurrIllnessDate>
+  <paid>0.0000</paid>
+</claim>
